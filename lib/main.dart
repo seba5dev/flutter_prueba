@@ -1,18 +1,56 @@
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'busqueda.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  Firebase.initializeApp();
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Welcome to Flutter',
+      title: 'Title',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Welcome to Flutter'),
+          title: const Text('App de tiendas'),
         ),
-        body: const Center(
-          child: Text('Hello World'),
+        body: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              Padding(
+                  padding:
+                      EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                  child: Container(
+                    width: 150,
+                    height: 150,
+                    child: Image.asset('image/logo.png'),
+                  )),
+              Padding(
+                  padding:
+                      EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                  child: TextField(
+                    decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: 'Busqueda de productos',
+                        hintText: 'Escriba aquí'),
+                  )),
+              Padding(
+                padding:
+                    EdgeInsets.only(left: 10, top: 10, right: 0, bottom: 0),
+                child: ElevatedButton(
+                    onPressed: () {
+                      print('Presionado');
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (_) => busqueda()));
+                    },
+                    child: Text('BUSCAR')),
+              ),
+            ],
+          ),
         ),
       ),
     );
