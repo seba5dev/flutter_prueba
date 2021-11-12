@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Title',
+      title: 'App de Tiendas',
       home: Scaffold(
         appBar: AppBar(
           title: const Text('App de tiendas'),
@@ -44,8 +44,6 @@ class MyApp extends StatelessWidget {
                 child: ElevatedButton(
                     onPressed: () {
                       print('Presionado');
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (_) => busqueda()));
                     },
                     child: Text('BUSCAR')),
               ),
