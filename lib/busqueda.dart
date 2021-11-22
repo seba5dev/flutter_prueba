@@ -10,7 +10,7 @@ class busquedaApp extends State<busqueda> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Registro de busqueda'),
+        title: const Text('Registro de búsqueda'),
       ),
     );
   }
