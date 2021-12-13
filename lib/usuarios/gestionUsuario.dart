@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'registroUser.dart';
 import 'login.dart';
 
-class gestionUsuario extends StatefulWidget{
+class gestionUsuario extends StatefulWidget {
   @override
-  GestionUsuarioApp createState()=> GestionUsuarioApp();
+  GestionUsuarioApp createState() => GestionUsuarioApp();
 }
 
-class GestionUsuarioApp extends State<gestionUsuario>{
+class GestionUsuarioApp extends State<gestionUsuario> {
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         flexibleSpace: Container(
@@ -31,11 +31,11 @@ class GestionUsuarioApp extends State<gestionUsuario>{
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding:
-              EdgeInsets.only(bottom:5, top: 5, right: 70),
+              padding: EdgeInsets.only(bottom: 5, top: 5, right: 70),
               child: ElevatedButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (_)=> registroUser()));
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => registroUser()));
                 },
                 child: Text('Registro de Usuario'),
                 style: ElevatedButton.styleFrom(
@@ -45,13 +45,13 @@ class GestionUsuarioApp extends State<gestionUsuario>{
               ),
             ),
             Padding(
-              padding:
-              EdgeInsets.only(top:5, bottom:5),
+              padding: EdgeInsets.only(top: 5, bottom: 5),
               child: ElevatedButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (_) => login()));
+                onPressed: () {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (_) => login()));
                 },
-                child:Text("Login"),
+                child: Text("Login"),
                 style: ElevatedButton.styleFrom(
                     primary: Colors.blue[600],
                     shape: RoundedRectangleBorder(
@@ -59,10 +59,9 @@ class GestionUsuarioApp extends State<gestionUsuario>{
               ),
             ),
             Padding(
-              padding:
-              EdgeInsets.only(bottom:5, top: 5),
+              padding: EdgeInsets.only(bottom: 5, top: 5),
               child: ElevatedButton(
-                onPressed: (){},
+                onPressed: () {},
                 child: Text('Modificar Usuario'),
                 style: ElevatedButton.styleFrom(
                     primary: Colors.blue[600],
@@ -71,10 +70,9 @@ class GestionUsuarioApp extends State<gestionUsuario>{
               ),
             ),
             Padding(
-              padding:
-              EdgeInsets.only(bottom:5, top: 5),
+              padding: EdgeInsets.only(bottom: 5, top: 5),
               child: ElevatedButton(
-                onPressed: (){},
+                onPressed: () {},
                 child: Text('Cambio de Contraseña'),
                 style: ElevatedButton.styleFrom(
                     primary: Colors.blue[600],
@@ -83,10 +81,9 @@ class GestionUsuarioApp extends State<gestionUsuario>{
               ),
             ),
             Padding(
-              padding:
-              EdgeInsets.only(bottom:5, top: 5),
+              padding: EdgeInsets.only(bottom: 5, top: 5),
               child: ElevatedButton(
-                onPressed: (){},
+                onPressed: () {},
                 child: Text('Dar de baja'),
                 style: ElevatedButton.styleFrom(
                     primary: Colors.blue[600],

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'busqueda.dart';
-import 'shop.dart';
-import 'shopRegister.dart';
-import 'gestionUsuario.dart';
+import 'tiendas/shop.dart';
+import 'tiendas/shopRegister.dart';
+import 'usuarios/gestionUsuario.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
